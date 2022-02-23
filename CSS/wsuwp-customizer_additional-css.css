@@ -1,4 +1,37 @@
-/*!*
+/*!*************************************
+█▀▀▀▐▄ ▄▌▐▀█▀▌█▀▀▄ ▄▀▀▄   ▄▀▀▀ ▄▀▀▀ ▄▀▀▀
+█▀▀   █    █  █▄▄▀ █▄▄█   █    ▀▀▀█ ▀▀▀█
+▀▀▀▀▐▀ ▀▌  █  ▀  ▀▄█  ▀    ▀▀▀ ▀▀▀  ▀▀▀ 
+FOR THE WRITING PROGRAM WEBSITE
+---------------------
+@version 1.0.0
+@author Daniel Rieck
+  [daniel.rieck@wsu.edu]
+  (https://github.com/invokeImmediately)
+@license MIT - Copyright © 2022
+  Washington State University
+  https://mit-license.org/
+***************************************/
+
+/**
+ * ---- TABLE OF CONTENTS ----
+ *  34: EXTRA FONT IMPORTS
+ *  42: NEWS SECTION HOTFIX: Visible articles
+ *  50: NEWS SECTION HOTFIX: Author visibility
+ *  58: ACCESSIBLE FEATURED IMAGES
+ *  67: TWEAKS TO LAYOUTS FOR NEWS PAGES
+ *  85: FIX CHILD THEME'S EXCESSIVE SPACING
+ * 142: FIXES TO THE CHILD THEME'S COLOR CHOICES
+ * 166: FIXES TO HEADING SIZES
+ * 233: TYPOGRAPHICAL FIXES
+ * 268: COLOR CONTRAST FIXES
+ * 284: ATOMIC CSS: SCREEN READER TARGETING
+ * 325: SLIGHT REMIX OF THE WEBSITE'S THEME
+ * 335: TWEAKS TO ARCHIVE/NEWS FEED LAYOUT
+ */
+
+/**
+ * ---- EXTRA FONT IMPORTS ----
  * CSS Added by Daniel Rieck. 
  * TODO: Fold into theme's custom style sheet.
  */
@@ -6,24 +39,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,600;0,700;0,900;1,600;1,700;1,900&display=swap');
 
 /**
+ * ---- NEWS SECTION HOTFIX: Visible articles ----
  * Help isolate the news section only to the latest news post.
- * Added 2020-10-01.
  */
 .single-post .row.prevnext {
   display: none;
 }
 
 /**
+ * ---- NEWS SECTION HOTFIX: Author visibility ----
  * Remove unhelpful "Author Info" page components found on news posts.
- * Added 2020-10-01.
  */
 .single-post .author-info {
   display: none;
 }
 
 /**
- * Accessible featured image.
- * Added 2020-12-18 by daniel.rieck@wsu.edu.
+ * ---- ACCESSIBLE FEATURED IMAGES ----
  */
 @media only screen and (min-width: 990px) {
 #binder.fluid.max-1188 .row.accessible-featured-image {
@@ -32,8 +64,7 @@
 }
 
 /**
- * Tweaks to layouts for news pages.
- * Added 2021-06-09 by daniel.rieck@wsu.edu.
+ * ---- TWEAKS TO LAYOUTS FOR NEWS PAGES ----
  */
 body.archive .article-title {
   font-size: 2rem;
@@ -51,8 +82,7 @@ body.archive article + article {
 }
 
 /**
- * Tweaks to the child theme's excessive spacing.
- * Added 2021-06-16 by daniel.rieck@wsu.edu.
+ * ---- FIX CHILD THEME'S EXCESSIVE SPACING ----
  */
 
 h1,
@@ -109,7 +139,7 @@ hr + h6 {
 }
 
 /**
- * Fixes to the child theme's color choices.
+ * ---- FIXES TO THE CHILD THEME'S COLOR CHOICES ----
  * Added 2021-06-16 by daniel.rieck@wsu.edu.
  */
 
@@ -133,8 +163,8 @@ main {
 }
 
 /**
- * Fixes to heading sizes. Based on the Web Design System (WDS).
- * Added 2021-06-16 by daniel.rieck@wsu.edu.
+ * ---- FIXES TO HEADING SIZES ----
+ * Based on the Web Design System (WDS).
  */
 
 h1,
@@ -200,8 +230,7 @@ h6 {
 }
 
 /**
- * Typographical fixes.
- * Added 2021-06-16 by daniel.rieck@wsu.edu.
+ * ---- TYPOGRAPHICAL FIXES ----
  */
 
 main ol,
@@ -236,8 +265,7 @@ p,
 }
 
 /**
- * Color contrast fixes.
- * Added 2021-06-16 by daniel.rieck@wsu.edu.
+ * ---- COLOR CONTRAST FIXES ----
  */
 
 .main-header {
@@ -253,8 +281,8 @@ p,
 }
 
 /**
+ * ---- ATOMIC CSS: SCREEN READER TARGETING ----
  * Rules for hiding content from the viewer but keeping it visisble to screen readers.
- * Added 2021-08-18 by daniel.rieck@wsu.edu.
  */
 
 .for-screen-readers {
@@ -272,8 +300,7 @@ p,
 }
 
 /**
- * Atomic CSS for general use on the WP website.
- * Added 2021-08-18 by daniel.rieck@wsu.edu.
+ * ATOMIC CSS: DISPLAY
  */
 
 .dy--block,
@@ -295,8 +322,7 @@ p,
 }
 
 /**
- * Slight remix of the website's theme.
- * Added 2021-08-18 by daniel.rieck@wsu.edu.
+ * ---- SLIGHT REMIX OF THE WEBSITE'S THEME ----
  */
 
 @media screen and (min-width: 1650px) {
@@ -306,8 +332,7 @@ p,
 }
 
 /**
- * Tweaks to archive/news feed layout.
- * Added 2021-08-18 by daniel.rieck@wsu.edu.
+ * ---- TWEAKS TO ARCHIVE/NEWS FEED LAYOUT ----
  */
 body.archive .article-summary img {
   display: none;

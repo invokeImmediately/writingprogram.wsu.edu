@@ -1,0 +1,339 @@
+/*!*
+ * CSS Added by Daniel Rieck. 
+ * TODO: Fold into theme's custom style sheet.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,600;0,700;0,900;1,600;1,700;1,900&display=swap');
+
+/**
+ * Help isolate the news section only to the latest news post.
+ * Added 2020-10-01.
+ */
+.single-post .row.prevnext {
+  display: none;
+}
+
+/**
+ * Remove unhelpful "Author Info" page components found on news posts.
+ * Added 2020-10-01.
+ */
+.single-post .author-info {
+  display: none;
+}
+
+/**
+ * Accessible featured image.
+ * Added 2020-12-18 by daniel.rieck@wsu.edu.
+ */
+@media only screen and (min-width: 990px) {
+#binder.fluid.max-1188 .row.accessible-featured-image {
+    max-width: none;
+}
+}
+
+/**
+ * Tweaks to layouts for news pages.
+ * Added 2021-06-09 by daniel.rieck@wsu.edu.
+ */
+body.archive .article-title {
+  font-size: 2rem;
+  line-height: 1.35em;
+  padding-top: 2rem;
+}
+
+body.archive article:first-child  .article-title {
+ padding-top: 0;
+}
+
+body.archive article + article {
+  border-top: 12px solid #eff0f1;
+  margin-top: 3rem;
+}
+
+/**
+ * Tweaks to the child theme's excessive spacing.
+ * Added 2021-06-16 by daniel.rieck@wsu.edu.
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+}
+
+*
+
+p {
+  padding-bottom: 0;
+}
+
+blockquote, main ol, p~p, main ul {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+* + p,
+* + ol,
+* + ul {
+  margin-top: 1rem;
+}
+
+* + h1,
+* + h2,
+* + h3,
+* + h4,
+* + h5,
+* + h6 {
+  margin-top: 2rem;
+}
+
+hr + h2,
+hr + h3,
+hr + h4,
+hr + h5,
+hr + h6 {
+  margin-top: 1rem;
+}
+
+.single.gutter {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.single.gutter .column:not(.gutterless) {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/**
+ * Fixes to the child theme's color choices.
+ * Added 2021-06-16 by daniel.rieck@wsu.edu.
+ */
+
+main {
+  background: #eff0f1;
+}
+
+.row:not(.gray) {
+  background: white;
+}
+
+.column a {
+  text-decoration: none;
+  border-bottom: 1px solid #981e32;
+}
+
+.column a:hover {
+  background: rgba(0,0,0,0.08);
+  border-bottom: 3px solid #c60c30;
+  transition: background .5s ease-out, color .5s ease-out, border .2s linear;
+}
+
+/**
+ * Fixes to heading sizes. Based on the Web Design System (WDS).
+ * Added 2021-06-16 by daniel.rieck@wsu.edu.
+ */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #2a3033;
+}
+
+h1,
+.xxlarger-hX {
+  font-size: 3rem;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h2,
+.xlarger-hX {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+h3,
+.larger-hX {
+  font-size: 1.8rem;
+}
+
+h4,
+.smaller-hX {
+  font-size: 1.5rem;
+}
+
+h5,
+.xsmaller-hX {
+  font-size: 1.25rem;
+}
+
+h6,
+.xxsmaller-hX {
+  font-size: 1rem;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+/**
+ * Typographical fixes.
+ * Added 2021-06-16 by daniel.rieck@wsu.edu.
+ */
+
+main ol,
+main ul,
+p,
+.normal-lh-txt {
+  line-height: 1.5em;
+}
+
+.xsmaller-lh-txt {
+  line-height: 1.3em;
+}
+
+.smaller-lh-txt {
+  line-height: 1.4em;
+}
+
+.larger-lh-txt {
+  line-height: 1.67em;
+}
+
+.xlarger-lh-txt {
+  line-height: 1.83em;
+}
+
+.xxlarger-lh-txt {
+  line-height: 2em;
+}
+
+#spine .spine-contact .organization-name {
+  font-size: 1em;
+}
+
+/**
+ * Color contrast fixes.
+ * Added 2021-06-16 by daniel.rieck@wsu.edu.
+ */
+
+.main-header {
+  background-color: #008094;
+}
+
+.main-header header[role="banner"] a:focus {
+  color: #c60c30;
+}
+
+#wsu-signature {
+  color: white !important;
+}
+
+/**
+ * Rules for hiding content from the viewer but keeping it visisble to screen readers.
+ * Added 2021-08-18 by daniel.rieck@wsu.edu.
+ */
+
+.for-screen-readers {
+  box-sizing: border-box !important;
+  height: 0 !important;
+  width: 0 !important;
+  border: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+}
+
+.for-screen-readers.row {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/**
+ * Atomic CSS for general use on the WP website.
+ * Added 2021-08-18 by daniel.rieck@wsu.edu.
+ */
+
+.dy--block,
+.dy--b {
+  display: block;
+}
+
+.dy--inline-block,
+.dy--ib {
+  display: inline-block;
+}
+
+.wp-blue-text {
+  color: #00a5bd;
+}
+
+.tt--none {
+  text-transform: none;
+}
+
+/**
+ * Slight remix of the website's theme.
+ * Added 2021-08-18 by daniel.rieck@wsu.edu.
+ */
+
+@media screen and (min-width: 1650px) {
+#wsuwp-main {
+  border-right-color: #23282b;
+}
+}
+
+/**
+ * Tweaks to archive/news feed layout.
+ * Added 2021-08-18 by daniel.rieck@wsu.edu.
+ */
+body.archive .article-summary img {
+  display: none;
+}
+
+body.archive .article-summary .article-thumbnail img {
+  display: block;
+}
+
+body.single-post .column.two,
+body.archive .column.two {
+  position: relative;
+  
+}
+
+body.single-post .column.two:after,
+body.archive .column.two:after {
+  bottom: 0;
+  border-left: 1px solid #efefef;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 2rem;
+  width: 0;
+}
+
+body.single-post .article-body {
+  margin-top: 2rem;
+}

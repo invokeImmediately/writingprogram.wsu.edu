@@ -4,7 +4,7 @@
 ▀▀▀▀▐▀ ▀▌  █  ▀  ▀▄█  ▀    ▀▀▀ ▀▀▀  ▀▀▀ 
 FOR THE WRITING PROGRAM WEBSITE
 ---------------------
-@version 1.0.1
+@version 1.1.0
 @author Daniel Rieck
   [daniel.rieck@wsu.edu]
   (https://github.com/invokeImmediately)
@@ -229,6 +229,21 @@ p,
 
 #wsu-signature {
   color: white !important;
+}
+
+#wsuwp-main {
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  color: #2a2a2a;
 }
 
 /**

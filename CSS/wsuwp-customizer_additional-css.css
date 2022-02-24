@@ -4,7 +4,7 @@
 ▀▀▀▀▐▀ ▀▌  █  ▀  ▀▄█  ▀    ▀▀▀ ▀▀▀  ▀▀▀ 
 FOR THE WRITING PROGRAM WEBSITE
 ---------------------
-@version 1.1.0
+@version 1.2.0
 @author Daniel Rieck
   [daniel.rieck@wsu.edu]
   (https://github.com/invokeImmediately)
@@ -18,17 +18,17 @@ FOR THE WRITING PROGRAM WEBSITE
  * ===========================
  *  36: FIX CHILD THEME'S EXCESSIVE SPACING
  *  93: FIXES TO THE CHILD THEME'S COLOR CHOICES
- * 117: FIXES TO HEADING SIZES
- * 184: TYPOGRAPHICAL FIXES
- * 219: COLOR CONTRAST FIXES
- * 235: EXTRA FONT IMPORTS
- * 243: NEWS SECTION HOTFIX: Visible articles
- * 251: NEWS SECTION HOTFIX: Author visibility
- * 259: TWEAKS TO LAYOUTS FOR NEWS PAGES
- * 277: ACCESSIBLE FEATURED IMAGES
- * 286: ATOMIC CSS: SCREEN READER TARGETING
- * 327: SLIGHT REMIX OF THE WEBSITE'S THEME
- * 337: TWEAKS TO ARCHIVE/NEWS FEED LAYOUT
+ * 130: FIXES TO HEADING SIZES
+ * 197: TYPOGRAPHICAL FIXES
+ * 232: COLOR CONTRAST FIXES
+ * 263: EXTRA FONT IMPORTS
+ * 271: NEWS SECTION HOTFIX: Visible articles
+ * 279: NEWS SECTION HOTFIX: Author visibility
+ * 287: TWEAKS TO LAYOUTS FOR NEWS PAGES
+ * 305: ACCESSIBLE FEATURED IMAGES
+ * 314: ATOMIC CSS: SCREEN READER TARGETING
+ * 355: SLIGHT REMIX OF THE WEBSITE'S THEME
+ * 365: TWEAKS TO ARCHIVE/NEWS FEED LAYOUT
  * ===========================
  */
 
@@ -95,11 +95,24 @@ hr + h6 {
  */
 
 main {
-  background: #eff0f1;
+  background: #eff0f1 url(https://s3.wp.wsu.edu/uploads/sites/1393/2022/02/wsu-brand-2021_pattern_slanted-lines.svg) repeat;
+  border-left: 0;
+  padding-left: .75rem;
+}
+
+.main-header {
+  border-left: 1px solid #e1e3e5;
+}
+
+.row.gray {
+  border-left: 1px solid #e1e3e5;
+  border-right: 1px solid #e1e3e5;
 }
 
 .row:not(.gray) {
   background: white;
+  border-left: 1px solid #e1e3e5;
+  border-right: 1px solid #e1e3e5;
 }
 
 .column a {

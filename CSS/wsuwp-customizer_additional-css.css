@@ -4,7 +4,7 @@
 ▀▀▀▀▐▀ ▀▌  █  ▀  ▀▄█  ▀    ▀▀▀ ▀▀▀  ▀▀▀ 
 FOR THE WRITING PROGRAM WEBSITE
 ---------------------
-@version 1.2.0
+@version 1.3.0
 @author Daniel Rieck
   [daniel.rieck@wsu.edu]
   (https://github.com/invokeImmediately)
@@ -17,18 +17,18 @@ FOR THE WRITING PROGRAM WEBSITE
  * ---- TABLE OF CONTENTS ----
  * ===========================
  *  36: FIX CHILD THEME'S EXCESSIVE SPACING
- *  93: FIXES TO THE CHILD THEME'S COLOR CHOICES
- * 130: FIXES TO HEADING SIZES
- * 197: TYPOGRAPHICAL FIXES
- * 232: COLOR CONTRAST FIXES
- * 263: EXTRA FONT IMPORTS
- * 271: NEWS SECTION HOTFIX: Visible articles
- * 279: NEWS SECTION HOTFIX: Author visibility
- * 287: TWEAKS TO LAYOUTS FOR NEWS PAGES
- * 305: ACCESSIBLE FEATURED IMAGES
- * 314: ATOMIC CSS: SCREEN READER TARGETING
- * 355: SLIGHT REMIX OF THE WEBSITE'S THEME
- * 365: TWEAKS TO ARCHIVE/NEWS FEED LAYOUT
+ * 116: FIXES TO THE CHILD THEME'S COLOR CHOICES
+ * 153: FIXES TO HEADING SIZES
+ * 220: TYPOGRAPHICAL FIXES
+ * 255: COLOR CONTRAST FIXES
+ * 286: EXTRA FONT IMPORTS
+ * 294: NEWS SECTION HOTFIX: Visible articles
+ * 302: NEWS SECTION HOTFIX: Author visibility
+ * 310: TWEAKS TO LAYOUTS FOR NEWS PAGES
+ * 328: ACCESSIBLE FEATURED IMAGES
+ * 337: ATOMIC CSS: SCREEN READER TARGETING
+ * 378: SLIGHT REMIX OF THE WEBSITE'S THEME
+ * 388: TWEAKS TO ARCHIVE/NEWS FEED LAYOUT
  * ===========================
  */
 
@@ -87,6 +87,29 @@ hr + h6 {
 .single.gutter .column:not(.gutterless) {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+@media only screen and (max-width: 693px) {
+  .single.gutter,
+  .halves.gutter {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .single.gutter .column:not(.gutterless) {
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .halves.gutter .column.one:not(.gutterless), .halves.gutter .column:nth-of-type(2n+3):not(.gutterless), .side-left.gutter .column.one:not(.gutterless), .side-right.gutter .column.one:not(.gutterless) {
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
+
+  .halves.gutter .column.two:not(.gutterless), .halves.gutter .column:nth-of-type(2n+4):not(.gutterless), .side-left.gutter .column.two:not(.gutterless), .side-right.gutter .column.two:not(.gutterless) {
+    padding-left: .75rem;
+    padding-right: .75rem;
+  }
 }
 
 /**

@@ -1,0 +1,175 @@
+/*! ================================================================================================
+*** ▐   ▌█▀▀▄ ▀█▀▐▀█▀▌▀█▀ ▐▀▀▄ █▀▀▀   █▀▀▄ █▀▀▄ ▄▀▀▄ █▀▀▀ █▀▀▄ ▄▀▀▄ ▐▀▄▀▌
+*** ▐ █ ▌█▄▄▀  █   █   █  █  ▐ █ ▀▄   █▄▄▀ █▄▄▀ █  █ █ ▀▄ █▄▄▀ █▄▄█ █ ▀ ▌
+***  ▀ ▀ ▀  ▀▄▀▀▀  █  ▀▀▀ ▀  ▐ ▀▀▀▀   █    ▀  ▀▄ ▀▀  ▀▀▀▀ ▀  ▀▄█  ▀ █   ▀
+***
+***    ▄▀▀▀ █  █ ▄▀▀▀▐▀█▀▌▄▀▀▄ ▐▀▄▀▌  ▄▀▀▀▐▀█▀▌█  █ █    ▀█▀ ▐▀▀▄ █▀▀▀
+***    █    █  █ ▀▀▀█  █  █  █ █ ▀ ▌  ▀▀▀█  █  ▀▄▄█ █  ▄  █  █  ▐ █ ▀▄
+***     ▀▀▀  ▀▀  ▀▀▀   █   ▀▀  █   ▀  ▀▀▀   █  ▄▄▄▀ ▀▀▀  ▀▀▀ ▀  ▐ ▀▀▀▀
+*** ================================================================================================
+*** Custom styling for the Writing Program website.
+***
+*** @author WSU University Marketing and Communications Web Team
+*** @author Daniel Rieck [daniel.rieck@wsu.edu] (https://github.com/invokeImmediately)
+*** @license MIT Copyright (c) 2022 Washington State University
+***   Permission is hereby granted, free of charge, to any person obtaining a copy of this software
+***     and associated documentation files (the "Software"), to deal in the Software without
+***     restriction, including without limitation the rights to use, copy, modify, merge, publish,
+***     distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom
+***     the Software is furnished to do so, subject to the following conditions:
+***   The above copyright notice and this permission notice shall be included in all copies or
+***     substantial portions of the Software.
+***   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING
+***     BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+***     NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+***     CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+***     ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+***     SOFTWARE.
+*** ================================================================================================
+**/
+.center-text ul li {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.home .wsuwp-content-syndicate-wrapper {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.content-item-byline-author,
+.article-author {
+  display: none;
+}
+
+/* New print styles added 2019-05-23. */
+@media print {
+  #fund-announcement {
+    display: none;
+  }
+  
+  body.blog .row.side-right .column.one {
+    width: 100% !important;
+  }
+  
+  body.blog .row.side-right .column.two {
+    width: 100% !important;
+  }
+  
+  body.blog .row.side-right p {
+    max-width: none;
+  }
+  
+  body.blog .row.side-right .article-thumbnail {
+    margin-left: 1em;
+  }
+  
+  body.home #wsuwp-main {
+    width: calc(100% - 198px) !important;
+    margin-left: 198px;
+  }
+  
+  body.home #spine {
+    display: block !important;
+  }
+  
+  body.home #spine nav ul ul li {
+    display: block !important;
+  }
+}
+
+/* Hotfix for removing utlity menu in the main header. */
+nav.utility {
+  display: none;
+}
+
+/**
+ * Sidebar right layout hotfix.
+ * Added by daniel.rieck@wsu.edu on 2020-12-18.
+ */
+.row.side-left.gutter,
+.row.side-right.gutter,
+.row.single.left-aligned {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.single.gutter.left-aligned .column:not(.gutterless) {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/**
+ * -------- Gutenberg Block Style Buttons for GWC Secondary Navigation --------
+ * Added 2022-01-27 by daniel.rieck@wsu.edu.
+ */
+@keyframes gwc-2nd-nav-fi {
+  0% {
+    opacity: 0;
+  }
+  
+  100% {
+    opacity: 1;
+  }
+}
+
+.gb-btns-list {
+  animation: gwc-2nd-nav-fi .15s linear .1s 1 forwards;
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin-bottom: -.5rem;
+  opacity: 0;
+  padding: 0;
+}
+
+.gb-btns-list__btn-cont {
+  margin-bottom: .5rem;
+  margin-right: .5rem;
+  padding: 0;
+}
+
+.gb-btns-list .gb-btns-list__btn-link {
+  background-color: #1a1a1a;
+  border: 2px solid transparent;
+  border-radius: .25rem;
+  color: white;
+  display: block;
+  padding: 1rem;
+}
+
+.gb-btns-list .gb-btns-list__btn-link {
+  border: 2px solid transparent;
+  background-color: #1a1a1a;
+}
+
+.gb-btns-list .gb-btns-list__btn-link--featured {
+  background-color: #007cba;
+}
+
+.gb-btns-list .gb-btns-list__btn-link--current {
+  border: 2px solid #1a1a1a;
+  background-color: #e5e5e5;
+  color: black;
+}
+
+.gb-btns-list .gb-btns-list__btn-link:hover,
+.gb-btns-list .gb-btns-list__btn-link:focus {
+  background-color: #343434;
+  border: 2px solid #00A4F6;
+  outline: 0;
+}
+
+.gb-btns-list .gb-btns-list__btn-link--featured:hover,
+.gb-btns-list .gb-btns-list__btn-link--featured:focus {
+  border-color: #8AD8FF;
+  background-color: #005C8A;
+}
+
+.gb-btns-list .gb-btns-list__btn-link--current:hover,
+.gb-btns-list .gb-btns-list__btn-link--current:focus {
+  border-color: black;
+  background-color: #c5c5c5;
+}

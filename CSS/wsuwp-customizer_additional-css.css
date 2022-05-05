@@ -1,40 +1,41 @@
-/*!*************************************
-█▀▀▀▐▄ ▄▌▐▀█▀▌█▀▀▄ ▄▀▀▄   ▄▀▀▀ ▄▀▀▀ ▄▀▀▀
-█▀▀   █    █  █▄▄▀ █▄▄█   █    ▀▀▀█ ▀▀▀█
-▀▀▀▀▐▀ ▀▌  █  ▀  ▀▄█  ▀    ▀▀▀ ▀▀▀  ▀▀▀ 
-FOR THE WRITING PROGRAM WEBSITE
----------------------
-@version 1.3.0
-@author Daniel Rieck
-  [daniel.rieck@wsu.edu]
-  (https://github.com/invokeImmediately)
-@license MIT - Copyright © 2022
-  Washington State University
-  https://mit-license.org/
-***************************************/
+ /*!***********************************************
+ * █▀▀▀▐▄ ▄▌▐▀█▀▌█▀▀▄ ▄▀▀▄   ▄▀▀▀ ▄▀▀▀ ▄▀▀▀
+ * █▀▀   █    █  █▄▄▀ █▄▄█   █    ▀▀▀█ ▀▀▀█
+ * ▀▀▀▀▐▀ ▀▌  █  ▀  ▀▄█  ▀    ▀▀▀ ▀▀▀  ▀▀▀
+ *
+ * FOR THE WRITING PROGRAM WEBSITE.
+ *
+ * This additional CSS is written assuming use of
+ *   the Stylus web browser extension to widen the
+ *   customizer panel to >= 50 characters wide.
+ * ---------------------
+ * @version 1.4.0
+ * @author Daniel Rieck
+ *   [daniel.rieck@wsu.edu]
+ *   (https://github.com/invokeImmediately)
+ * @link https://writingprogram.wsu.edu/wp-admin/c
+ *   ustomize.php  --»  Additional CSS
+ * @license MIT - Copyright © 2022
+ *   Washington State University
+ *   https://mit-license.org/
+ ************************************************/
 
-/**
- * ---- TABLE OF CONTENTS ----
- * ===========================
- *  36: FIX CHILD THEME'S EXCESSIVE SPACING
- * 116: FIXES TO THE CHILD THEME'S COLOR CHOICES
- * 153: FIXES TO HEADING SIZES
- * 220: TYPOGRAPHICAL FIXES
- * 255: COLOR CONTRAST FIXES
- * 286: EXTRA FONT IMPORTS
- * 294: NEWS SECTION HOTFIX: Visible articles
- * 302: NEWS SECTION HOTFIX: Author visibility
- * 310: TWEAKS TO LAYOUTS FOR NEWS PAGES
- * 328: ACCESSIBLE FEATURED IMAGES
- * 337: ATOMIC CSS: SCREEN READER TARGETING
- * 378: SLIGHT REMIX OF THE WEBSITE'S THEME
- * 388: TWEAKS TO ARCHIVE/NEWS FEED LAYOUT
- * ===========================
- */
+/*!***********************************************
+ * -------------  TABLE OF CONTENTS  -------------
+ * ===============================================
+ * §1: SPACING..................................34
+ * §2: COLOR...................................117
+ * §3: TYPOGRAPHY..............................199
+ * §4: NEWS SECTION............................310
+ * §5: ATOMIC CSS..............................418
+ ************************************************/
 
-/**
- * ---- FIX CHILD THEME'S EXCESSIVE SPACING ----
- */
+/*!***********************************************
+ * §1: SPACING
+ ************************************************/
+
+/*--»  Fix Spine child theme's excessive
+       spacing.  «--*/
 
 h1,
 h2,
@@ -112,10 +113,11 @@ hr + h6 {
   }
 }
 
-/**
- * ---- FIXES TO THE CHILD THEME'S COLOR CHOICES ----
- * Added 2021-06-16 by daniel.rieck@wsu.edu.
- */
+/*!***********************************************
+ * §2: COLOR
+ ************************************************/
+
+/*--»  Fixes to the child theme's color choices.  «--*/
 
 main {
   background: #eff0f1 url(https://s3.wp.wsu.edu/uploads/sites/1393/2022/02/wsu-brand-2021_pattern_slanted-lines.svg) repeat;
@@ -149,10 +151,57 @@ main {
   transition: background .5s ease-out, color .5s ease-out, border .2s linear;
 }
 
-/**
- * ---- FIXES TO HEADING SIZES ----
- * Based on the Web Design System (WDS).
- */
+/*--»  Color contrast fixes.  «--*/
+
+.main-header {
+  background-color: #008094;
+}
+
+.main-header header[role="banner"] a:focus {
+  color: #c60c30;
+}
+
+#wsu-signature {
+  color: white !important;
+}
+
+#wsuwp-main {
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+  color: #2a2a2a;
+}
+
+/*--»  Adjust main section bordering.  «--*/
+
+@media screen and (min-width: 1650px) {
+  #wsuwp-main {
+    border-right-color: #23282b;
+  }
+}
+
+
+/*--»  Correct coloring of contact form.  «--*/
+
+.row.contact-form .column {
+  background-color: inherit;
+}
+
+/*!***********************************************
+ * §3: TYPOGRAPHY
+ ************************************************/
+
+/*--»  Making heading sizes more consistent with
+        what is done in the Web Design System
+        (WDS) theme.  «--*/
 
 h1,
 h2,
@@ -160,7 +209,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 
 h2,
@@ -216,9 +265,7 @@ h6 {
   font-weight: 600;
 }
 
-/**
- * ---- TYPOGRAPHICAL FIXES ----
- */
+/*--»  Make other typographical fixes.  «--*/
 
 main ol,
 main ul,
@@ -251,64 +298,32 @@ p,
   font-size: 1em;
 }
 
-/**
- * ---- COLOR CONTRAST FIXES ----
- */
-
-.main-header {
-  background-color: #008094;
+.main-header header[role="banner"] a {
+  font-weight: bold;
 }
 
-.main-header header[role="banner"] a:focus {
-  color: #c60c30;
-}
-
-#wsu-signature {
-  color: white !important;
-}
-
-#wsuwp-main {
-  color: black;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-strong,
-b {
-  color: #2a2a2a;
-}
-
-/**
- * ---- EXTRA FONT IMPORTS ----
- * CSS Added by Daniel Rieck. 
- * TODO: Fold into theme's custom style sheet.
- */
+/*--»  Extra font imports.  «--*/
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,600;0,700;0,900;1,600;1,700;1,900&display=swap');
 
-/**
- * ---- NEWS SECTION HOTFIX: Visible articles ----
- * Help isolate the news section only to the latest news post.
- */
+/*!***********************************************
+ * §4: NEWS SECTION
+ ************************************************/
+
+/*--»  Hotfix Visible articles.  «--*/
 .single-post .row.prevnext {
   display: none;
 }
 
-/**
- * ---- NEWS SECTION HOTFIX: Author visibility ----
- * Remove unhelpful "Author Info" page components found on news posts.
- */
+/*--»  Remove unhelpful "Author Info" page
+        components found on news posts.  «--*/
 .single-post .author-info {
   display: none;
 }
 
-/**
- * ---- TWEAKS TO LAYOUTS FOR NEWS PAGES ----
- */
+/*--» Tweak aspects of layouts on news
+       pages.  «--*/
+
 body.archive .article-title {
   font-size: 2rem;
   line-height: 1.35em;
@@ -324,19 +339,88 @@ body.archive article + article {
   margin-top: 3rem;
 }
 
-/**
- * ---- ACCESSIBLE FEATURED IMAGES ----
- */
-@media only screen and (min-width: 990px) {
-#binder.fluid.max-1188 .row.accessible-featured-image {
-    max-width: none;
-}
+body.archive .article-summary img {
+  display: none;
 }
 
-/**
- * ---- ATOMIC CSS: SCREEN READER TARGETING ----
- * Rules for hiding content from the viewer but keeping it visisble to screen readers.
- */
+body.archive .article-summary .article-thumbnail img {
+  display: block;
+}
+
+body.single-post .column.two,
+body.archive .column.two {
+  position: relative;
+}
+
+body.single-post .column.two:after,
+body.archive .column.two:after {
+  bottom: 0;
+  border-left: 1px solid #efefef;
+  content: "";
+  left: 0;
+  position: absolute;
+  top: 2rem;
+  width: 0;
+}
+
+body.archive .article-header {
+  margin-bottom: 1.5rem;
+}
+
+body.archive .article-title {
+  margin-bottom: .5rem;
+}
+
+body.archive .article-title a:not(:hover),
+body.archive .article-summary a:not(:hover):not(.more-link) {
+  border-bottom: 0;
+  color: inherit;
+}
+
+body.archive .article-title a:before,
+body.archive .article-summary a:not(.more-link):after {
+  content: "\F126";
+  font-size: .75em;
+  font-family: wsu-icons;
+}
+
+body.archive .article-title a:before {
+  display: inline-block;
+  margin-right: .3em;
+}
+
+body.archive .article-summary a:not(.more-link):after {
+  margin-right: .3em;
+  margin-left: .3em;
+}
+
+body.archive .article-footer {
+  margin-top: 1rem;
+}
+
+body.single-post .article-body {
+  margin-top: 2rem;
+}
+
+body.archive .article-summary figure a:not(.more-link):after {
+  content: none;
+}
+
+/*--»  Make featured images accessible.  «--*/
+
+@media only screen and (min-width: 990px) {
+  #binder.fluid.max-1188 .row.accessible-featured-image {
+      max-width: none;
+  }
+}
+
+/*!***********************************************
+ * §5: ATOMIC CSS
+ ************************************************/
+
+/*--»  Create utility class for hiding content
+        from the viewer but keeping it visible to
+        screen readers.  «--*/
 
 .for-screen-readers {
   box-sizing: border-box !important;
@@ -352,9 +436,8 @@ body.archive article + article {
   padding: 0 !important;
 }
 
-/**
- * ATOMIC CSS: DISPLAY
- */
+/*--»  Write utility classes for controlling
+        display states.  «--*/
 
 .dy--block,
 .dy--b {
@@ -366,52 +449,16 @@ body.archive article + article {
   display: inline-block;
 }
 
+/*--»  Create utility classes for changing
+        color.  «--*/
+
 .wp-blue-text {
   color: #00a5bd;
 }
 
+/*--»  Write typographical utility
+        classes.  «--*/
+
 .tt--none {
   text-transform: none;
-}
-
-/**
- * ---- SLIGHT REMIX OF THE WEBSITE'S THEME ----
- */
-
-@media screen and (min-width: 1650px) {
-#wsuwp-main {
-  border-right-color: #23282b;
-}
-}
-
-/**
- * ---- TWEAKS TO ARCHIVE/NEWS FEED LAYOUT ----
- */
-body.archive .article-summary img {
-  display: none;
-}
-
-body.archive .article-summary .article-thumbnail img {
-  display: block;
-}
-
-body.single-post .column.two,
-body.archive .column.two {
-  position: relative;
-  
-}
-
-body.single-post .column.two:after,
-body.archive .column.two:after {
-  bottom: 0;
-  border-left: 1px solid #efefef;
-  content: "";
-  left: 0;
-  position: absolute;
-  top: 2rem;
-  width: 0;
-}
-
-body.single-post .article-body {
-  margin-top: 2rem;
 }
